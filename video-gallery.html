@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Videos - Admark Digitech</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+    <link rel="stylesheet" href="/assets/style.css?v=3">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="/assets/script.js" defer></script>
+
+  <style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  p {
+    text-align: center;
+  }
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Default mobile-first: full width */
+.video-card {
+  width: 100%;
+  max-width: 100%;
+  flex: 1 1 100%;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s;
+  text-align: center;
+  padding: 10px;
+}
+
+  .video-card:hover {
+    transform: scale(1.03);
+  }
+
+  .video-card video {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .video-card p {
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 1rem;
+  }
+
+  /* MODAL STYLES */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .modal-content {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+  }
+
+  .modal video {
+    width: 100%;
+    border-radius: 8px;
+    max-height: 400px;
+  }
+
+  .controls {
+    margin-top: 10px;
+  }
+
+  .controls button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .controls button:hover {
+    background-color: #555;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    .video-card {
+      width: 45%;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .gallery {
+      padding: 10px;
+      gap: 15px;
+    }
+
+    .video-card {
+      width: 100%;
+      padding: 8px;
+    }
+
+    .video-card video {
+      height: 160px;
+    }
+
+    .video-card p {
+      font-size: 0.95rem;
+    }
+
+    .modal-content {
+      padding: 10px;
+    }
+
+    .modal video {
+      max-height: 250px;
+    }
+  }
+
+  /* Medium screens: 2 cards per row */
+@media (min-width: 480px) {
+  .video-card {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}
+
+/* Tablets / Small laptops: 3 cards per row */
+@media (min-width: 768px) {
+  .video-card {
+    flex: 1 1 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+  }
+}
+
+/* Large screens: 4 cards per row */
+@media (min-width: 992px) {
+  .video-card {
+    flex: 1 1 calc(25% - 20px);
+    max-width: calc(25% - 20px);
+  }
+}
+
+/* Extra large desktops: 5 cards per row */
+@media (min-width: 1200px) {
+  .video-card {
+    flex: 1 1 calc(20% - 20px);
+    max-width: calc(20% - 20px);
+  }
+}
+</style>
+
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header id="header"></header>
+
+  <section>
+    <h2>OUR PRODUCT VIDEOS</h2>
+    <p>Click on a video to play in popup</p>
+    <div class="gallery">
+
+      <div class="video-card" data-src="assets/videos/Flex 512 42 PL.mp4">
+        <video src="assets/videos/Flex 512 42 PL.mp4" muted  playsinline></video>
+        <p>Flex 512 42 PL</p>
+      </div>
+
+      <div class="video-card" data-src="assets/videos/Admark CK8+ 30 PL.mp4">
+        <video src="assets/videos/Admark CK8+ 30 PL.mp4" muted playsinline></video>
+        <p>Admark CK8+ 30 PL</p>
+      </div>
+
+      <div class="video-card" data-src="assets/videos/Aethra C8 Positive Pressure.mp4">
+        <video src="assets/videos/Aethra C8 Positive Pressure.mp4" muted playsinline></video>
+        <p>Aethra C8 Positive Pressure</p>
+      </div>
+
+       <div class="video-card" data-src="assets/videos/Allwin 512i C8 C8+ 30 PL Negative Pressure.mp4">
+        <video src="assets/videos/Allwin 512i C8 C8+ 30 PL Negative Pressure.mp4" muted playsinline></video>
+        <p>Allwin 512i C8/C8+ 30 PL Negative Pressure</p>
+      </div>
+
+      <div class="video-card" data-src="assets/videos/Aethra 512i A8 30 PL Negative Pressure.mp4">
+        <video src="assets/videos/Aethra 512i A8 30 PL Negative Pressure.mp4" muted playsinline></video>
+        <p>Aethra 512i A8 30 PL Negative Pressure</p>
+      </div>
+
+      <div class="video-card" data-src="assets/videos/Aethra 512i A8+ 30 PL Negative Pressure.mp4">
+        <video src="assets/videos/Aethra 512i A8+ 30 PL Negative Pressure.mp4" muted playsinline></video>
+        <p>Aethra 512i A8+ 30 PL Negative Pressure</p>
+      </div>
+
+       <div class="video-card" data-src="assets/videos/Allwin 1024i C8+ 30 13 PL Negative Pressure.mp4">
+        <video src="assets/videos/Allwin 1024i C8+ 30 13 PL Negative Pressure.mp4" muted  playsinline></video>
+        <p>Allwin 1024i C8+ 30/13 PL Negative Pressure</p>
+      </div>
+
+      <div class="video-card" data-src="assets/videos/Aethra 1024i A8+ 30 13 PL Negative Pressure.mp4">
+        <video src="assets/videos/Aethra 1024i A8+ 30 13 PL Negative Pressure.mp4" muted  playsinline></video>
+        <p>Aethra 1024i A8+ 30/13 PL Negative Pressure</p>
+      </div>
+
+      <div class="video-card" data-src="assets/videos/Aethra 1024i R8i 30 13 PL Negative Pressure.mp4">
+        <video src="assets/videos/Aethra 1024i R8i 30 13 PL Negative Pressure.mp4" muted playsinline></video>
+        <p>Aethra 1024i R8i 30/13 PL Negative Pressure</p>
+      </div>
+
+       <div class="video-card" data-src="assets/videos/Aethra Starfire AS4 25 10 PL Negative Pressure.mp4">
+        <video src="assets/videos/Aethra Starfire AS4 25 10 PL Negative Pressure.mp4" muted playsinline></video>
+        <p>Aethra Starfire AS4 25/10 PL Negative Pressure</p>
+      </div>
+
+      <div class="video-card" data-src="assets/videos/Eco Solvent Gethray 1.8m.mp4">
+        <video src="assets/videos/Eco Solvent Gethray 1.8m.mp4" muted  playsinline></video>
+        <p>Eco Solvent Gethray 1.8m</p>
+      </div>
+
+      <div class="video-card" data-src="assets/videos/UV Flated 2' x 3'.mp4">
+        <video src="assets/videos/UV Flated 2' x 3'.mp4" muted  playsinline></video>
+        <p>UV Flated 2' x 3'</p>
+      </div>
+
+      <div class="video-card" data-src="assets/videos/UV Flated 8' x 4'.mp4">
+        <video src="assets/videos/UV Flated 8' x 4'.mp4" muted  playsinline></video>
+        <p>UV Flated 8' x 4'</p>
+      </div> 
+
+        <div class="video-card" data-src="assets/videos/UV Hybrid 1.8m.mp4">
+        <video src="assets/videos/UV Hybrid 1.8m.mp4" muted playsinline></video>
+        <p>UV Hybrid 1.8m</p>
+      </div>
+        <div class="video-card" data-src="assets/videos/UV Hybrid 3.2m.mp4">
+        <video src="assets/videos/UV Hybrid 3.2m.mp4" muted  playsinline></video>
+        <p>UV Hybrid 3.2m</p>
+      </div>
+        <div class="video-card" data-src="assets/videos/UV Roll To Roll Double Head Body.mp4">
+        <video src="assets/videos/UV Roll To Roll Double Head Body.mp4" muted  playsinline></video>
+        <p>UV Roll To Roll Double Head Body</p>
+      </div>
+        <div class="video-card" data-src="assets/videos/UV Roll To Roll Four Head Body.mp4">
+        <video src="assets/videos/UV Roll To Roll Four Head Body.mp4" muted playsinline></video>
+        <p>UV Roll To Roll Four Head Body</p>
+      </div>
+        <div class="video-card" data-src="assets/videos/UV Roll To Roll 3.2m.mp4">
+        <video src="assets/videos/UV Roll To Roll 3.2m.mp4" muted  playsinline></video>
+        <p>UV Roll To Roll 3.2m</p>
+      </div>
+        <div class="video-card" data-src="assets/videos/CNC Channel Bending.mp4">
+        <video src="assets/videos/CNC Channel Bending.mp4" muted  playsinline></video>
+        <p>CNC Channel Bending</p>
+      </div>
+        <div class="video-card" data-src="assets/videos/CNC Router 4' x 8'.mp4">
+        <video src="assets/videos/CNC Router 4' x 8'.mp4" muted  playsinline></video>
+        <p>CNC Router 4' x 8'</p>
+      </div>
+        <div class="video-card" data-src="assets/videos/CNC Router 5' x 10'.mp4">
+        <video src="assets/videos/CNC Router 5' x 10'.mp4" muted  playsinline></video>
+        <p>CNC Router 5' x 10'</p>
+      </div>
+        <div class="video-card" data-src="assets/videos/CNC Router Double Spindle.mp4">
+        <video src="assets/videos/CNC Router Double Spindle.mp4" muted  playsinline></video>
+        <p>CNC Router Double Spindle</p>
+      </div>
+        <div class="video-card" data-src="assets/videos/CNC Router Pattern Making.mp4">
+        <video src="assets/videos/CNC Router Pattern Making.mp4" muted  playsinline></video>
+        <p>CNC Router Pattern Making</p>
+      </div>
+        <div class="video-card" data-src="assets/videos/CNC Laser 2' x 3'.mp4">
+        <video src="assets/videos/CNC Laser 2' x 3'.mp4" muted  playsinline></video>
+        <p>CNC Laser 2' x 3'</p>
+      </div>
+        <div class="video-card" data-src="assets/videos/CNC Laser 4' x 3'.mp4">
+        <video src="assets/videos/CNC Laser 4' x 3'.mp4" muted  playsinline></video>
+        <p>CNC Laser 4' x 3'</p>
+      </div>
+        <div class="video-card" data-src="assets/videos/CNC Laser 4' x 4'.mp4">
+        <video src="assets/videos/CNC Laser 4' x 4'.mp4" muted  playsinline></video>
+        <p>CNC Laser 4' x 4'</p>
+      </div>
+        <div class="video-card" data-src="assets/videos/CNC Laser 8' x 4'.mp4">
+        <video src="assets/videos/CNC Laser 8' x 4'.mp4" muted  playsinline></video>
+        <p>CNC Laser 8' x 4'</p>
+      </div>
+        <div class="video-card" data-src="assets/videos/CNC Laser CCD.mp4">
+        <video src="assets/videos/CNC Laser CCD.mp4" muted  playsinline></video>
+        <p>CNC Laser CCD</p>
+        </div>
+        <div class="video-card" data-src="assets/videos/Fiber Laser.mp4">
+        <video src="assets/videos/Fiber Laser.mp4" muted  playsinline></video>
+        <p>Fiber Laser</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL -->
+  <div class="modal" id="videoModal">
+    <div class="modal-content">
+      <video id="modalVideo" controls>
+        <source src="" type="video/mp4">
+        Your browser does not support video playback.
+      </video>
+      <div class="controls">
+        <button id="playBtn"><i class="fas fa-play"></i> Start</button>
+        <button id="pauseBtn"><i class="fas fa-pause"></i> Stop</button>
+        <button id="closeBtn"><i class="fas fa-times"></i> Exit</button>
+      </div>
+    </div>
+  </div>
+
+
+     <!-- FOOTER -->
+    <footer id="footer"></footer>
+    
+  <script>
+    const modal = document.getElementById("videoModal");
+    const modalVideo = document.getElementById("modalVideo");
+    const playBtn = document.getElementById("playBtn");
+    const pauseBtn = document.getElementById("pauseBtn");
+    const closeBtn = document.getElementById("closeBtn");
+
+    document.querySelectorAll(".video-card").forEach(card => {
+      card.addEventListener("click", () => {
+        const videoSrc = card.getAttribute("data-src");
+        modalVideo.src = videoSrc;
+        modal.style.display = "flex";
+        modalVideo.play();
+      });
+    });
+
+    playBtn.onclick = () => modalVideo.play();
+    pauseBtn.onclick = () => modalVideo.pause();
+    closeBtn.onclick = () => {
+      modal.style.display = "none";
+      modalVideo.pause();
+      modalVideo.src = "";
+    };
+
+    window.onclick = (e) => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+        modalVideo.pause();
+        modalVideo.src = "";
+      }
+    };
+  </script>
+
+</body>
+</html>
