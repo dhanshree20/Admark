@@ -3,11 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CNC Routers - Admark Digitech</title>
+    <title>CNC Router - Admark Digitech</title>
     <link rel="icon" type="image/png" href="/assets/favicon.png">
     <link rel="stylesheet" href="/assets/style.css?v=3">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <script src="/assets/script.js" defer></script>
+
+    <style>
+        /* Product Section */
+.product-section1 {
+    padding: 50px 10%;
+}
+
+.product-container1 {
+    display: flex;
+    justify-content: center;
+}
+
+.product-grid1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+/* Product Card */
+.product-card1 {
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* ensures equal height in grid */
+}
+
+.product-card1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Styling */
+.product-image1 img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* Product Info */
+.product-info1 {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 20px;
+    text-align: left;
+}
+
+.product-info1 h3 {
+    font-size: 20px;
+    color: #ff6600;
+    margin-bottom: 8px;
+}
+
+.product-info1 p {
+    font-size: 15px;
+    color: #777;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+
+/* Button Styling */
+.product-btn1 {
+    padding: 10px 18px;
+    background: #ff6600;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: auto; 
+    text-align: center;
+}
+
+.product-btn1:hover {
+    background: #ff6600;
+    transform: scale(1.05);
+}
+    </style>
 </head>
 <body>
 
@@ -16,53 +101,61 @@
 
     <!-- Banner Section -->
     <section class="product-banner">
-        <h1>Our CNC Routers</h1>
+        <h1>CNC Router</h1>
     </section>
 
-    <!-- CNC Router List -->
-    <section class="product-section">
-        <div class="product-container">
-            <div class="product-grid">
+    <!-- Product List -->
+    <section class="product-section1">
+        <div class="product-container1">
+            <div class="product-grid1">
                 
                 <!-- CNC Router 1 -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="/assets/images/Products/Wood Router/1.png" alt="Wood Router">
+                <div class="product-card1">
+                    <div class="product-image1">
+                        <img src="assets/images/All_Products/CNC_Router/4' x 8'.jpg" alt="Konica 512/42PL">
                     </div>
-                    <div class="product-info">
-                        <h3>Wood Router</h3>
-                        <p>Precision CNC router designed for woodworking projects.</p>
-                        <span class="price">₹6,50,000</span>
-                        <a href="wood-router.html" class="product-btn">View More</a>
+                    <div class="product-info1">
+                        <h3>4' x 8'</h3>
+                        <p>Ideal for standard plywood sheets, the 4' x 8' CNC router is commonly used in woodworking, cabinetry, and sign-making. It offers great precision and is perfect for small to medium-scale production.</p>
+                        <a href="cnc_Router_4'x8'.html" class="product-btn1">View Product</a>
                     </div>
                 </div>
 
                 <!-- CNC Router 2 -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="/assets/images/Products/Stone Router/1.png" alt="Stone Router">
+                <div class="product-card1">
+                    <div class="product-image1">
+                        <img src="assets/images/All_Products/CNC_Router/5' x 10'.jpg" alt="Konica 512I/30PL">
                     </div>
-                    <div class="product-info">
-                        <h3>Stone Router</h3>
-                        <p>Heavy-duty CNC router ideal for working with stone materials.</p>
-                        <span class="price">₹7,50,000</span>
-                        <a href="stone-router.html" class="product-btn">View More</a>
+                    <div class="product-info1">
+                        <h3>5' x 10'</h3>
+                        <p>The 5' x 10' CNC router features a larger cutting area, suitable for oversized materials and high-volume tasks. It's widely used in industrial applications requiring extended workspace and efficiency.</p>
+                        <a href="cnc_Router_5'x10'.html" class="product-btn1">View Product</a>
                     </div>
                 </div>
 
                 <!-- CNC Router 3 -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="/assets/images/cnc/sign-malcon.jpg" alt="Sign Malcon">
+                <div class="product-card1">
+                    <div class="product-image1">
+                        <img src="assets/images/All_Products/CNC_Router/double_spindle.jpg" alt="Konica 512I/30PL">
                     </div>
-                    <div class="product-info">
-                        <h3>Sign Maker</h3>
-                        <p>High-performance router for creating signage with precision.</p>
-                        <span class="price">$4,199.99</span>
-                        <a href="sign-maker.html" class="product-btn">View More</a>
+                    <div class="product-info1">
+                        <h3>Double Spindle</h3>
+                        <p>A Double Spindle CNC router features two cutting heads, allowing it to perform dual operations simultaneously. It boosts productivity by cutting two parts at once or using different tools in one setup.</p>
+                        <a href="gethray_3.2m.html" class="product-btn1">View Product</a>
                     </div>
                 </div>
 
+                <!-- CNC Router 4 -->
+                <div class="product-card1">
+                    <div class="product-image1">
+                        <img src="assets/images/All_Products/CNC_Router/Pattern_Stone_making.jpg" alt="Konica 512I/30PL">
+                    </div>
+                    <div class="product-info1">
+                        <h3>Pattern/Stone Making</h3>
+                        <p>This CNC router is specialized for carving intricate patterns on stone, marble, or granite. It's ideal for monuments, decorative stonework, and detailed engraving applications.</p>
+                        <a href="gethray_3.2m.html" class="product-btn1">View Product</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
