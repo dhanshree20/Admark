@@ -369,7 +369,7 @@ body, html {
 
 /* PRODUCTS SECTION */
 .products {
-    background: var(--body-color);
+    background: var(--body-color, #f9f9f9);
 
     text-align: center;
 }
@@ -379,7 +379,7 @@ body, html {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: var(--title-color);
+    color: var(--title-color, #333);
     margin-bottom: 3rem;
     position: relative;
     display: inline-block;
@@ -408,6 +408,7 @@ body, html {
 .product {
     position: relative;
     width: 350px;
+    height: 400px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
@@ -443,7 +444,7 @@ body, html {
 
 .product__description {
     font-size: 0.95rem;
-    color: var(--text-color);
+    color: var(--text-color, #555);
     margin-bottom: 1rem;
     line-height: 1.5;
 }
