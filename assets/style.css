@@ -399,7 +399,7 @@ body, html {
 .product-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+    gap: 50px;
     place-items: center;
     padding: 0 40px;
 }
@@ -794,6 +794,39 @@ footer {
     color: #ff6600;
     text-decoration: underline;
 }
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center; /* Center icons on smaller screens */
+    margin-right: 205px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 24px;
+    transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ff6600;
+    transform: scale(1.2);
+}
+
+/* Responsive tweaks for small screens */
+@media (max-width: 480px) {
+    .social-icons {
+        gap: 10px;
+        font-size: 20px;
+    }
+
+    .social-icons a {
+        font-size: 20px;
+    }
+}
+
 
 /* Social Media Styling */
 .footer-section.social ul li a i {
